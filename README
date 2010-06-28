@@ -1,7 +1,5 @@
 Megaphone
 
-An announcement system for the iPhone and iPad
-
 Megaphone provides a simple way to inform your current customers about app launches and updates inside your own application.
 
 Installation
@@ -22,4 +20,4 @@ Installation
 	}
 	
 Credit:
-This project uses a copy of the JSON library from http://code.google.com/p/json-framework/
+This project uses a copy of the excellent JSON library from http://code.google.com/p/json-framework/
