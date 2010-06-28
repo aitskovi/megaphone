@@ -6,6 +6,24 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		FDC7DE7E11D8F2D100F22564 /* megaphone */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FDC7DE8A11D8F2F100F22564 /* Build configuration list for PBXAggregateTarget "megaphone" */;
+			buildPhases = (
+				FDC7DE8611D8F2ED00F22564 /* Merge */,
+				FDC7DE9011D8F35100F22564 /* CopyFiles */,
+				FDC7DE9211D8F36500F22564 /* Zip */,
+			);
+			dependencies = (
+				FDC7DE8211D8F2E000F22564 /* PBXTargetDependency */,
+				FDC7DE8411D8F2E000F22564 /* PBXTargetDependency */,
+			);
+			name = megaphone;
+			productName = megaphone;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		AA747D9F0F9514B9006C5449 /* megaphone_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* megaphone_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
@@ -25,7 +43,56 @@
 		FD03670811D7DC4F00537A32 /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366FB11D7DC4F00537A32 /* SBJsonWriter.h */; };
 		FD03670911D7DC4F00537A32 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366FC11D7DC4F00537A32 /* SBJsonWriter.m */; };
 		FD03670B11D7E04C00537A32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD03670A11D7E04C00537A32 /* UIKit.framework */; };
+		FDC7DE5511D8EE6D00F22564 /* megaphone_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* megaphone_Prefix.pch */; };
+		FDC7DE5611D8EE6D00F22564 /* MPNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366EB11D7DBFB00537A32 /* MPNotification.h */; };
+		FDC7DE5711D8EE6D00F22564 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F011D7DC4F00537A32 /* JSON.h */; };
+		FDC7DE5811D8EE6D00F22564 /* NSObject+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F111D7DC4F00537A32 /* NSObject+SBJSON.h */; };
+		FDC7DE5911D8EE6D00F22564 /* NSString+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F311D7DC4F00537A32 /* NSString+SBJSON.h */; };
+		FDC7DE5A11D8EE6D00F22564 /* SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F511D7DC4F00537A32 /* SBJSON.h */; };
+		FDC7DE5B11D8EE6D00F22564 /* SBJsonBase.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F711D7DC4F00537A32 /* SBJsonBase.h */; };
+		FDC7DE5C11D8EE6D00F22564 /* SBJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F911D7DC4F00537A32 /* SBJsonParser.h */; };
+		FDC7DE5D11D8EE6D00F22564 /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366FB11D7DC4F00537A32 /* SBJsonWriter.h */; };
+		FDC7DE5F11D8EE6D00F22564 /* MPNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366EC11D7DBFB00537A32 /* MPNotification.m */; };
+		FDC7DE6011D8EE6D00F22564 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366F211D7DC4F00537A32 /* NSObject+SBJSON.m */; };
+		FDC7DE6111D8EE6D00F22564 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366F411D7DC4F00537A32 /* NSString+SBJSON.m */; };
+		FDC7DE6211D8EE6D00F22564 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366F611D7DC4F00537A32 /* SBJSON.m */; };
+		FDC7DE6311D8EE6D00F22564 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366F811D7DC4F00537A32 /* SBJsonBase.m */; };
+		FDC7DE6411D8EE6D00F22564 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366FA11D7DC4F00537A32 /* SBJsonParser.m */; };
+		FDC7DE6511D8EE6D00F22564 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366FC11D7DC4F00537A32 /* SBJsonWriter.m */; };
+		FDC7DE6711D8EE6D00F22564 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		FDC7DE6811D8EE6D00F22564 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD03670A11D7E04C00537A32 /* UIKit.framework */; };
+		FDC7DE8D11D8F34F00F22564 /* MPNotification.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FD0366EB11D7DBFB00537A32 /* MPNotification.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDC7DE8111D8F2E000F22564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* megaphone-dev */;
+			remoteInfo = "megaphone-dev";
+		};
+		FDC7DE8311D8F2E000F22564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDC7DE5311D8EE6D00F22564 /* megaphone-sim */;
+			remoteInfo = "megaphone-sim";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDC7DE9011D8F35100F22564 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = megaphone;
+			dstSubfolderSpec = 7;
+			files = (
+				FDC7DE8D11D8F34F00F22564 /* MPNotification.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AA747D9E0F9514B9006C5449 /* megaphone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = megaphone_Prefix.pch; sourceTree = SOURCE_ROOT; };
@@ -47,6 +114,7 @@
 		FD0366FB11D7DC4F00537A32 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		FD0366FC11D7DC4F00537A32 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		FD03670A11D7E04C00537A32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FDC7DE6C11D8EE6D00F22564 /* libmegaphone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmegaphone.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +127,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDC7DE6611D8EE6D00F22564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC7DE6711D8EE6D00F22564 /* Foundation.framework in Frameworks */,
+				FDC7DE6811D8EE6D00F22564 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libmegaphone.a */,
+				FDC7DE6C11D8EE6D00F22564 /* libmegaphone.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,12 +225,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDC7DE5411D8EE6D00F22564 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC7DE5511D8EE6D00F22564 /* megaphone_Prefix.pch in Headers */,
+				FDC7DE5611D8EE6D00F22564 /* MPNotification.h in Headers */,
+				FDC7DE5711D8EE6D00F22564 /* JSON.h in Headers */,
+				FDC7DE5811D8EE6D00F22564 /* NSObject+SBJSON.h in Headers */,
+				FDC7DE5911D8EE6D00F22564 /* NSString+SBJSON.h in Headers */,
+				FDC7DE5A11D8EE6D00F22564 /* SBJSON.h in Headers */,
+				FDC7DE5B11D8EE6D00F22564 /* SBJsonBase.h in Headers */,
+				FDC7DE5C11D8EE6D00F22564 /* SBJsonParser.h in Headers */,
+				FDC7DE5D11D8EE6D00F22564 /* SBJsonWriter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D2AAC07D0554694100DB518D /* megaphone */ = {
+		D2AAC07D0554694100DB518D /* megaphone-dev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "megaphone" */;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "megaphone-dev" */;
 			buildPhases = (
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
@@ -162,9 +256,26 @@
 			);
 			dependencies = (
 			);
-			name = megaphone;
+			name = "megaphone-dev";
 			productName = megaphone;
 			productReference = D2AAC07E0554694100DB518D /* libmegaphone.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FDC7DE5311D8EE6D00F22564 /* megaphone-sim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDC7DE6911D8EE6D00F22564 /* Build configuration list for PBXNativeTarget "megaphone-sim" */;
+			buildPhases = (
+				FDC7DE5411D8EE6D00F22564 /* Headers */,
+				FDC7DE5E11D8EE6D00F22564 /* Sources */,
+				FDC7DE6611D8EE6D00F22564 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "megaphone-sim";
+			productName = megaphone;
+			productReference = FDC7DE6C11D8EE6D00F22564 /* libmegaphone.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -180,10 +291,43 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC07D0554694100DB518D /* megaphone */,
+				D2AAC07D0554694100DB518D /* megaphone-dev */,
+				FDC7DE5311D8EE6D00F22564 /* megaphone-sim */,
+				FDC7DE7E11D8F2D100F22564 /* megaphone */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FDC7DE8611D8F2ED00F22564 /* Merge */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Merge;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# make a new output folder\nmkdir -p ${PROJECT_DIR}/build/${BUILD_STYLE}-iphoneos/megaphone\n \n# combine lib files for various platforms into one\nlipo -create \"${PROJECT_DIR}/build/${BUILD_STYLE}-iphoneos/libmegaphone.a\" \"${PROJECT_DIR}/build/${BUILD_STYLE}-iphonesimulator/libmegaphone.a\" -output \"${PROJECT_DIR}/build/${BUILD_STYLE}-iphoneos/megaphone/libmegaphone-${BUILD_STYLE}.a\"";
+		};
+		FDC7DE9211D8F36500F22564 /* Zip */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Zip;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ditto -c -k --keepParent \"${PROJECT_DIR}/build/${BUILD_STYLE}-iphoneos/megaphone\" \"${PROJECT_DIR}/build/${BUILD_STYLE}-iphoneos/megaphone.zip\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2AAC07B0554694100DB518D /* Sources */ = {
@@ -200,7 +344,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDC7DE5E11D8EE6D00F22564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC7DE5F11D8EE6D00F22564 /* MPNotification.m in Sources */,
+				FDC7DE6011D8EE6D00F22564 /* NSObject+SBJSON.m in Sources */,
+				FDC7DE6111D8EE6D00F22564 /* NSString+SBJSON.m in Sources */,
+				FDC7DE6211D8EE6D00F22564 /* SBJSON.m in Sources */,
+				FDC7DE6311D8EE6D00F22564 /* SBJsonBase.m in Sources */,
+				FDC7DE6411D8EE6D00F22564 /* SBJsonParser.m in Sources */,
+				FDC7DE6511D8EE6D00F22564 /* SBJsonWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDC7DE8211D8F2E000F22564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* megaphone-dev */;
+			targetProxy = FDC7DE8111D8F2E000F22564 /* PBXContainerItemProxy */;
+		};
+		FDC7DE8411D8F2E000F22564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDC7DE5311D8EE6D00F22564 /* megaphone-sim */;
+			targetProxy = FDC7DE8311D8F2E000F22564 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
@@ -218,6 +389,7 @@
 				GCC_PREFIX_HEADER = megaphone_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = megaphone;
+				SDKROOT = iphoneos3.2;
 			};
 			name = Debug;
 		};
@@ -232,6 +404,7 @@
 				GCC_PREFIX_HEADER = megaphone_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = megaphone;
+				SDKROOT = iphoneos3.2;
 			};
 			name = Release;
 		};
@@ -262,10 +435,65 @@
 			};
 			name = Release;
 		};
+		FDC7DE6A11D8EE6D00F22564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/megaphone.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = megaphone_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = megaphone;
+				SDKROOT = iphonesimulator3.2;
+			};
+			name = Debug;
+		};
+		FDC7DE6B11D8EE6D00F22564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/megaphone.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = megaphone_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = megaphone;
+				SDKROOT = iphonesimulator3.2;
+			};
+			name = Release;
+		};
+		FDC7DE7F11D8F2D100F22564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = megaphone;
+			};
+			name = Debug;
+		};
+		FDC7DE8011D8F2D100F22564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = megaphone;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "megaphone" */ = {
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "megaphone-dev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,
@@ -279,6 +507,24 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDC7DE6911D8EE6D00F22564 /* Build configuration list for PBXNativeTarget "megaphone-sim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC7DE6A11D8EE6D00F22564 /* Debug */,
+				FDC7DE6B11D8EE6D00F22564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDC7DE8A11D8F2F100F22564 /* Build configuration list for PBXAggregateTarget "megaphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC7DE7F11D8F2D100F22564 /* Debug */,
+				FDC7DE8011D8F2D100F22564 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
