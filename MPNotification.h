@@ -14,14 +14,16 @@
 	NSMutableData *responseData;
 	UIAlertView *alert;
 	int notificationId;
-	NSURL *buttonLink;
+	NSURL *link;
 }
 
 - (id)init;
 - (void)showNotification;
 - (void)fetchNotification;
 - (void)createAlertFromData:(NSData *)data;
+
 // UIAlertViewDelegate Methods
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 
 // NSURLConnectionDelegate Methods
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
