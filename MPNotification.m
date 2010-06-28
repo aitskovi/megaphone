@@ -52,7 +52,7 @@
 	[[NSUserDefaults standardUserDefaults] setObject:data forKey:@"MPNotification"];
 	
 	// Create an alert from the object
-	buttonLink = [[notification objectForKey:@"link"] retain];
+	buttonLink = [[NSURL URLWithString:[notification objectForKey:@"buttonLink"]] retain];
 	NSString *title = [notification objectForKey:@"title"];
 	NSString *body = [notification objectForKey:@"body"];
 	NSString *buttonTitle = [notification objectForKey:@"buttonTitle"];
@@ -66,7 +66,6 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	if (buttonIndex == 1) {
-		NSLog(@"I MADE IT");
 		[[UIApplication sharedApplication] openURL:buttonLink];
 	}
 }
@@ -97,6 +96,7 @@
 	if (newNotificationID > notificationId) {
 		[self createAlertFromData:responseData];
 		notificationId = newNotificationID;
+		[[NSUserDefaults standardUserDefaults] setInteger:notificationId forKey:@"MPNotificationID"];
 	}
 	[responseData release];
 	responseData = nil;
