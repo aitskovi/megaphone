@@ -9,12 +9,44 @@
 /* Begin PBXBuildFile section */
 		AA747D9F0F9514B9006C5449 /* megaphone_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* megaphone_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		FD0366ED11D7DBFB00537A32 /* MPNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366EB11D7DBFB00537A32 /* MPNotification.h */; };
+		FD0366EE11D7DBFB00537A32 /* MPNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366EC11D7DBFB00537A32 /* MPNotification.m */; };
+		FD0366FD11D7DC4F00537A32 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F011D7DC4F00537A32 /* JSON.h */; };
+		FD0366FE11D7DC4F00537A32 /* NSObject+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F111D7DC4F00537A32 /* NSObject+SBJSON.h */; };
+		FD0366FF11D7DC4F00537A32 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366F211D7DC4F00537A32 /* NSObject+SBJSON.m */; };
+		FD03670011D7DC4F00537A32 /* NSString+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F311D7DC4F00537A32 /* NSString+SBJSON.h */; };
+		FD03670111D7DC4F00537A32 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366F411D7DC4F00537A32 /* NSString+SBJSON.m */; };
+		FD03670211D7DC4F00537A32 /* SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F511D7DC4F00537A32 /* SBJSON.h */; };
+		FD03670311D7DC4F00537A32 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366F611D7DC4F00537A32 /* SBJSON.m */; };
+		FD03670411D7DC4F00537A32 /* SBJsonBase.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F711D7DC4F00537A32 /* SBJsonBase.h */; };
+		FD03670511D7DC4F00537A32 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366F811D7DC4F00537A32 /* SBJsonBase.m */; };
+		FD03670611D7DC4F00537A32 /* SBJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366F911D7DC4F00537A32 /* SBJsonParser.h */; };
+		FD03670711D7DC4F00537A32 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366FA11D7DC4F00537A32 /* SBJsonParser.m */; };
+		FD03670811D7DC4F00537A32 /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = FD0366FB11D7DC4F00537A32 /* SBJsonWriter.h */; };
+		FD03670911D7DC4F00537A32 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0366FC11D7DC4F00537A32 /* SBJsonWriter.m */; };
+		FD03670B11D7E04C00537A32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD03670A11D7E04C00537A32 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AA747D9E0F9514B9006C5449 /* megaphone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = megaphone_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libmegaphone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmegaphone.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0366EB11D7DBFB00537A32 /* MPNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNotification.h; sourceTree = "<group>"; };
+		FD0366EC11D7DBFB00537A32 /* MPNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNotification.m; sourceTree = "<group>"; };
+		FD0366F011D7DC4F00537A32 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		FD0366F111D7DC4F00537A32 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		FD0366F211D7DC4F00537A32 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		FD0366F311D7DC4F00537A32 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		FD0366F411D7DC4F00537A32 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		FD0366F511D7DC4F00537A32 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		FD0366F611D7DC4F00537A32 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		FD0366F711D7DC4F00537A32 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		FD0366F811D7DC4F00537A32 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		FD0366F911D7DC4F00537A32 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		FD0366FA11D7DC4F00537A32 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		FD0366FB11D7DC4F00537A32 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		FD0366FC11D7DC4F00537A32 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		FD03670A11D7E04C00537A32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				FD03670B11D7E04C00537A32 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				FD03670A11D7E04C00537A32 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -59,6 +93,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FD0366EB11D7DBFB00537A32 /* MPNotification.h */,
+				FD0366EC11D7DBFB00537A32 /* MPNotification.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -66,9 +102,30 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FD0366EF11D7DC4F00537A32 /* JSON */,
 				AA747D9E0F9514B9006C5449 /* megaphone_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		FD0366EF11D7DC4F00537A32 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				FD0366F011D7DC4F00537A32 /* JSON.h */,
+				FD0366F111D7DC4F00537A32 /* NSObject+SBJSON.h */,
+				FD0366F211D7DC4F00537A32 /* NSObject+SBJSON.m */,
+				FD0366F311D7DC4F00537A32 /* NSString+SBJSON.h */,
+				FD0366F411D7DC4F00537A32 /* NSString+SBJSON.m */,
+				FD0366F511D7DC4F00537A32 /* SBJSON.h */,
+				FD0366F611D7DC4F00537A32 /* SBJSON.m */,
+				FD0366F711D7DC4F00537A32 /* SBJsonBase.h */,
+				FD0366F811D7DC4F00537A32 /* SBJsonBase.m */,
+				FD0366F911D7DC4F00537A32 /* SBJsonParser.h */,
+				FD0366FA11D7DC4F00537A32 /* SBJsonParser.m */,
+				FD0366FB11D7DC4F00537A32 /* SBJsonWriter.h */,
+				FD0366FC11D7DC4F00537A32 /* SBJsonWriter.m */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,6 +136,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA747D9F0F9514B9006C5449 /* megaphone_Prefix.pch in Headers */,
+				FD0366ED11D7DBFB00537A32 /* MPNotification.h in Headers */,
+				FD0366FD11D7DC4F00537A32 /* JSON.h in Headers */,
+				FD0366FE11D7DC4F00537A32 /* NSObject+SBJSON.h in Headers */,
+				FD03670011D7DC4F00537A32 /* NSString+SBJSON.h in Headers */,
+				FD03670211D7DC4F00537A32 /* SBJSON.h in Headers */,
+				FD03670411D7DC4F00537A32 /* SBJsonBase.h in Headers */,
+				FD03670611D7DC4F00537A32 /* SBJsonParser.h in Headers */,
+				FD03670811D7DC4F00537A32 /* SBJsonWriter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0366EE11D7DBFB00537A32 /* MPNotification.m in Sources */,
+				FD0366FF11D7DC4F00537A32 /* NSObject+SBJSON.m in Sources */,
+				FD03670111D7DC4F00537A32 /* NSString+SBJSON.m in Sources */,
+				FD03670311D7DC4F00537A32 /* SBJSON.m in Sources */,
+				FD03670511D7DC4F00537A32 /* SBJsonBase.m in Sources */,
+				FD03670711D7DC4F00537A32 /* SBJsonParser.m in Sources */,
+				FD03670911D7DC4F00537A32 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +245,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos3.2;
 			};
 			name = Debug;
 		};
@@ -186,7 +258,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos3.2;
 			};
 			name = Release;
 		};
