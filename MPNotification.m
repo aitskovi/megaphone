@@ -7,6 +7,7 @@
 //
 
 #import "MPNotification.h"
+#import "JSON.h"
 
 @implementation MPNotification
 
@@ -21,7 +22,6 @@
 }
 
 - (void)fetchNotification {
-	NSLog(@"Fetch Notification");
 	responseData = [[NSMutableData data] retain];
 	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.bloqsoftware.com/notification.json"]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];

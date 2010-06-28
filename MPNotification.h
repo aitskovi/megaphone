@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "JSON.h"
 
 @interface MPNotification : NSObject <UIAlertViewDelegate>{
 	NSMutableData *responseData;
