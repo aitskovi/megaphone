@@ -16,10 +16,14 @@
 	NSURL *link;
 }
 
+// API Methods
 - (id)init;
 - (void)showNotification;
+
+// Private methods
 - (void)fetchNotification;
-- (void)createAlertFromData:(NSData *)data;
+- (void)fetchID;
+- (UIAlertView *)createAlertFromData:(NSData *)data;
 
 // UIAlertViewDelegate Methods
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;

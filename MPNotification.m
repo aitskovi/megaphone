@@ -14,19 +14,34 @@
 - (id)init {
 	if ((self = [super init])) {
 		// Send request to server for a notification
-		[self fetchNotification];
+		[self fetchID];
 		// Fetch last notification id
 		notificationId = [[NSUserDefaults standardUserDefaults] integerForKey:@"MPNotificationID"];
 	}
 	return self;
 }
 
+/*
+ * Initiate connection to fetch the notification id for the next alert
+ */
+- (void)fetchID {
+	responseData = [[NSMutableData data] retain];
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.bloqsoftware.com/id.json"]];
+	[[NSURLConnection alloc] initWithRequest:request delegate:self];
+}
+
+/*
+ * Initiate connection to fetch the notification data for the next alert
+ */
 - (void)fetchNotification {
 	responseData = [[NSMutableData data] retain];
 	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.bloqsoftware.com/notification.json"]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
+/*
+ * Show the notification as an AlertView (show cached notification if new isn't available)
+ */
 - (void)showNotification {
 	// If new alert hasn't been found
 	if (alert == nil) {
@@ -34,7 +49,7 @@
 		if (storedData == nil) {
 			return;
 		} else {
-			[self createAlertFromData:storedData];
+			alert = [[self createAlertFromData:storedData] retain];
 		}
 	}
 	// Remove pre-cached data and update presented alert id
@@ -42,7 +57,10 @@
 	[alert show];
 }
 
-- (void)createAlertFromData:(NSData *)data {
+/*
+ * Parse the fetched alert data and create a UIAlertView from it to be shown
+ */
+- (UIAlertView *)createAlertFromData:(NSData *)data {
 	NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 	
 	// Parse the JSON data
@@ -58,7 +76,8 @@
 	NSString *buttonTitle = [notification objectForKey:@"buttonTitle"];
 	NSString *cancelButtonTitle = [notification objectForKey:@"cancelTitle"];
 	
-	alert = [[UIAlertView alloc] initWithTitle:title message:body delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:buttonTitle,nil];
+	UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:title message:body delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:buttonTitle,nil] autorelease];
+	return alertView;
 }
 
 #pragma mark -
@@ -91,15 +110,27 @@
 	
 	// Make sure its a new Notification and create an alert from it if it is
 	NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-	NSDictionary *notification = [responseString JSONValue];
-	int newNotificationID = [[notification objectForKey:@"NotificationID"] intValue];
-	if (newNotificationID > notificationId) {
-		[self createAlertFromData:responseData];
-		notificationId = newNotificationID;
+	id notification = [responseString JSONValue];
+	
+	// Check if you're parsing the notification id or the notification data
+	if ([notification isKindOfClass:[NSArray class]]) {
+		// If there's a new notification get it and show it)
+		int newId = [[notification objectAtIndex:0] intValue];
+		if (newId > notificationId) {
+			notificationId = newId;
+			[responseData release];
+			responseData = nil;
+			[self fetchNotification];
+		} else {
+			[responseData release];
+			responseData = nil;
+		}
+	} else {
+		alert = [[self createAlertFromData:responseData] retain];
 		[[NSUserDefaults standardUserDefaults] setInteger:notificationId forKey:@"MPNotificationID"];
+		[responseData release];
+		responseData = nil;
 	}
-	[responseData release];
-	responseData = nil;
 }
 
 - (void)dealloc {
