@@ -37,7 +37,8 @@
  */
 - (void)fetchID {
 	responseData = [[NSMutableData data] retain];
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/megaphone/data/id.json", alertURL]]];
+	NSString *urlString = [NSString stringWithFormat:@"%@/megaphone/data/id.json", self.alertURL];
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString: urlString]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
@@ -46,7 +47,8 @@
  */
 - (void)fetchNotification {
 	responseData = [[NSMutableData data] retain];
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/megaphone/data/notification.json", alertURL]]];
+	NSString *urlString = [NSString stringWithFormat:@"%@/megaphone/data/notification.json", self.alertURL];
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString: urlString]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
@@ -86,6 +88,11 @@
 	NSString *body = [notification objectForKey:@"body"];
 	NSString *buttonTitle = [notification objectForKey:@"buttonTitle"];
 	NSString *cancelButtonTitle = [notification objectForKey:@"cancelTitle"];
+	
+	// Check that you can quit the application
+	if (cancelButtonTitle == nil) {
+		return nil;
+	}
 	
 	UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:title message:body delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:buttonTitle,nil] autorelease];
 	return alertView;
