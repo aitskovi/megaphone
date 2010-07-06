@@ -14,10 +14,14 @@
 	UIAlertView *alert;
 	int notificationId;
 	NSURL *link;
+	NSString *alertURL;
 }
+
+@property (nonatomic, retain) NSString *alertURL;
 
 // API Methods
 - (id)init;
+- (id)initWithAddress:(NSString	*)address;
 - (void)showNotification;
 
 // Private methods

@@ -11,8 +11,19 @@
 
 @implementation MPNotification
 
+@synthesize alertURL;
+
 - (id)init {
+	return self = [self initWithAddress:@"http://209.222.173.237"];
+}
+
+/*
+ * Initializer that allows you to specify which server to get alerts from
+ */
+- (id)initWithAddress:(NSString *)address {
 	if ((self = [super init])) {
+		//TODO: Make sure this isn't a bad URL
+		self.alertURL = address;
 		// Send request to server for a notification
 		[self fetchID];
 		// Fetch last notification id
@@ -26,7 +37,7 @@
  */
 - (void)fetchID {
 	responseData = [[NSMutableData data] retain];
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.bloqsoftware.com/id.json"]];
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/megaphone/data/id.json", alertURL]]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
@@ -35,7 +46,7 @@
  */
 - (void)fetchNotification {
 	responseData = [[NSMutableData data] retain];
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.bloqsoftware.com/notification.json"]];
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/megaphone/data/notification.json", alertURL]]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
@@ -111,7 +122,6 @@
 	// Make sure its a new Notification and create an alert from it if it is
 	NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 	id notification = [responseString JSONValue];
-	
 	// Check if you're parsing the notification id or the notification data
 	if ([notification isKindOfClass:[NSArray class]]) {
 		// If there's a new notification get it and show it)
@@ -134,6 +144,7 @@
 }
 
 - (void)dealloc {
+	[alertURL release];
 	[super dealloc];
 }
 @end
