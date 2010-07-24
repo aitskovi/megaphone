@@ -14,7 +14,7 @@
 @synthesize alertURL;
 
 - (id)init {
-	return self = [self initWithAddress:@"http://209.222.173.237"];
+	return self = [self initWithAddress:@"http://www.bloqsoftware.com"];
 }
 
 /*
@@ -58,11 +58,11 @@
 - (void)showNotification {
 	// If new alert hasn't been found
 	if (alert == nil) {
-		NSData *storedData = [[NSUserDefaults standardUserDefaults] dataForKey:@"MPNotification"];
+		NSDictionary *storedData = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"MPNotification"];
 		if (storedData == nil) {
 			return;
 		} else {
-			alert = [[self createAlertFromData:storedData] retain];
+			alert = [[self createAlertFromDictionary:storedData] retain];
 		}
 	}
 	// Remove pre-cached data and update presented alert id
@@ -73,24 +73,22 @@
 /*
  * Parse the fetched alert data and create a UIAlertView from it to be shown
  */
-- (UIAlertView *)createAlertFromData:(NSData *)data {
-	NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-	
-	// Parse the JSON data
-	NSDictionary *notification = [responseString JSONValue];
+- (UIAlertView *)createAlertFromDictionary:(NSDictionary *)data {
+	NSLog(@"Creating an alert from data");
 	
 	// Save data to make sure you have it even if application quits
 	[[NSUserDefaults standardUserDefaults] setObject:data forKey:@"MPNotification"];
 	
 	// Create an alert from the object
-	link = [[NSURL URLWithString:[notification objectForKey:@"link"]] retain];
-	NSString *title = [notification objectForKey:@"title"];
-	NSString *body = [notification objectForKey:@"body"];
-	NSString *buttonTitle = [notification objectForKey:@"buttonTitle"];
-	NSString *cancelButtonTitle = [notification objectForKey:@"cancelTitle"];
+	link = [[NSURL URLWithString:[data objectForKey:@"link"]] retain];
+	NSString *title = [data objectForKey:@"title"];
+	NSString *body = [data objectForKey:@"body"];
+	NSString *buttonTitle = [data objectForKey:@"buttonTitle"];
+	NSString *cancelButtonTitle = [data objectForKey:@"cancelTitle"];
 	
 	// Check that you can quit the application
 	if (cancelButtonTitle == nil) {
+		[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"MPNotification"];
 		return nil;
 	}
 	
@@ -133,6 +131,7 @@
 	if ([notification isKindOfClass:[NSArray class]]) {
 		// If there's a new notification get it and show it)
 		int newId = [[notification objectAtIndex:0] intValue];
+		NSLog(@"Notification id is %d", newId);
 		if (newId > notificationId) {
 			notificationId = newId;
 			[responseData release];
@@ -142,12 +141,17 @@
 			[responseData release];
 			responseData = nil;
 		}
+	} else if ([notification isKindOfClass:[NSDictionary class]]){
+		alert = [[self createAlertFromDictionary:notification] retain];
+		[[NSUserDefaults standardUserDefaults] setInteger:notificationId forKey:@"MPNotificationID"];
+		[responseData release];
+		responseData = nil;
 	} else {
-		alert = [[self createAlertFromData:responseData] retain];
 		[[NSUserDefaults standardUserDefaults] setInteger:notificationId forKey:@"MPNotificationID"];
 		[responseData release];
 		responseData = nil;
 	}
+
 }
 
 - (void)dealloc {

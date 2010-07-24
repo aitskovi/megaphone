@@ -27,7 +27,7 @@
 // Private methods
 - (void)fetchNotification;
 - (void)fetchID;
-- (UIAlertView *)createAlertFromData:(NSData *)data;
+- (UIAlertView *)createAlertFromDictionary:(NSDictionary *)data;
 
 // UIAlertViewDelegate Methods
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
