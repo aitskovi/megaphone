@@ -14,7 +14,7 @@
 @synthesize alertURL;
 
 - (id)init {
-	return self = [self initWithAddress:@"http://www.bloqsoftware.com"];
+	return self = [self initWithAddress:@"http://www.bloqsoftware.com/megaphone/data"];
 }
 
 /*
@@ -37,7 +37,7 @@
  */
 - (void)fetchID {
 	responseData = [[NSMutableData data] retain];
-	NSString *urlString = [NSString stringWithFormat:@"%@/megaphone/data/id.json", self.alertURL];
+	NSString *urlString = [NSString stringWithFormat:@"%@/id.json", self.alertURL];
 	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString: urlString]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
@@ -47,7 +47,7 @@
  */
 - (void)fetchNotification {
 	responseData = [[NSMutableData data] retain];
-	NSString *urlString = [NSString stringWithFormat:@"%@/megaphone/data/notification.json", self.alertURL];
+	NSString *urlString = [NSString stringWithFormat:@"%@/notification.json", self.alertURL];
 	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString: urlString]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
