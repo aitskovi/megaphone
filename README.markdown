@@ -1,7 +1,7 @@
 Megaphone
 =========
 
-Megaphone provides a simple way to inform your current customers about app launches and updates inside your own application.
+Megaphone provides a simple way to inform your current customers about app launches and updates inside your own application. Notifications are currently consist of all text and are presented as a UIAlertView.
 
 Installation
 ------------
@@ -15,7 +15,8 @@ The id.json file should contain:
 id is an integer identifier for your notification that you will keep increasing with each succesive message.
 
 The notification.json file should contain
-	{ "title":"",
+	{ 
+	  "title":"",
 	  "body":"",
 	  "link":"",
 	  "buttonTitle":"",
@@ -44,5 +45,6 @@ cancelTitle - The text of the cancel button
 		}
 	
 
-Credit:
+Credit
+-------
 This project uses a copy of the excellent JSON library from http://code.google.com/p/json-framework/
